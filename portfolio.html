@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antoine Wzietek - E-Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page-section { display: none; animation: fadeIn 0.3s ease-in-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center font-bold text-2xl tracking-tight text-rose-700">
+                    AW.
+                </div>
+                <div class="hidden md:flex space-x-6 items-center text-sm font-medium">
+                    <button onclick="showPage('welcome')" class="hover:text-rose-700 transition">Welcome & Career</button>
+                    <button onclick="showPage('cvs')" class="hover:text-rose-700 transition font-bold">CV</button>
+                    <button onclick="showPage('mobility')" class="hover:text-rose-700 transition">International Mobility</button>
+                    <button onclick="showPage('sustainability')" class="hover:text-rose-700 transition">Sustainability</button>
+                    <button onclick="showPage('activities')" class="hover:text-rose-700 transition">Sport & Activities</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- 1. Welcome & Career Section -->
+        <section id="welcome" class="page-section active">
+            <h1 class="text-4xl font-extrabold mb-8">Welcome to my E-Portfolio</h1>
+            
+            <!-- Profile Info with Photo -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-shrink-0">
+                    <img src="https://lh3.googleusercontent.com/d/14936unUEWS9m1BKg9e3UJwDL0kdhbGov" alt="Antoine Wzietek" class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-md border-4 border-gray-50">
+                </div>
+                <div>
+                    <p class="text-xl mb-4 text-gray-800 font-medium">
+                        Hello, I'm Antoine Wzietek, a first-year engineering student at ENSEEIHT majoring in Digital Sciences.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Feel free to explore this page to discover more about my academic journey, my civic engagements, my personal interests, and my career perspectives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Professional Links -->
+            <div class="flex flex-wrap gap-4 mb-10">
+                <button onclick="showPage('cvs')" class="bg-rose-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-800 transition flex items-center gap-2">
+                    📄 View My CVs
+                </button>
+                <a href="https://www.linkedin.com/in/antoine-wzietek-b63436433/" target="_blank" rel="noopener noreferrer" class="bg-white border border-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition flex items-center gap-2">
+                    🔗 LinkedIn Profile
+                </a>
+            </div>
+
+            <!-- Elevator Pitch Video (Google Drive) -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-10">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Elevator Pitch</h2>
+                <div class="w-full rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-gray-900">
+                    <iframe class="w-full h-72 md:h-[500px]" src="https://drive.google.com/file/d/1vdHsZFfnNGXnPFj6QlsoXVGCse3IDzri/preview" title="Antoine Wzietek - Elevator Pitch" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Role Models -->
+            <div>
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Role Models Analysis</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 border border-gray-100 rounded-xl shadow-sm h-24">
+                        <p class="font-bold text-rose-700">Role Model 1</p>
+                    </div>
+                    <div class="bg-white p-6 border border-gray-100 rounded-xl shadow-sm h-24">
+                        <p class="font-bold text-rose-700">Role Model 2</p>
+                    </div>
+                    <div class="bg-white p-6 border border-gray-100 rounded-xl shadow-sm h-24">
+                        <p class="font-bold text-rose-700">Role Model 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CV Section -->
+        <section id="cvs" class="page-section">
+            <h1 class="text-4xl font-extrabold mb-8">CV</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- French CV -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+                    <h2 class="font-black text-xl mb-4 uppercase tracking-wider text-gray-800">French:</h2>
+                    <iframe src="https://drive.google.com/file/d/1YmFEQgexyXOOWtTrgr5Zs2ZONJJ-xDVR/preview" class="w-full h-[800px] border-0 rounded-lg bg-gray-50"></iframe>
+                </div>
+                
+                <!-- English CV -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+                    <h2 class="font-black text-xl mb-4 uppercase tracking-wider text-gray-800">English:</h2>
+                    <iframe src="https://drive.google.com/file/d/1XKj_H1KoFXsWTBOn5bOOa3PSCxIpS6Ij/preview" class="w-full h-[800px] border-0 rounded-lg bg-gray-50"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. International Mobility Section -->
+        <section id="mobility" class="page-section">
+            <h1 class="text-4xl font-extrabold mb-8">International Mobility</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6 text-rose-700">Intercultural Background</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Spain</h3>
+                            <p class="text-gray-600 mt-2">Traveled to Spain for 7 consecutive years, allowing me to achieve deep cultural immersion, practice the language consistently, and study the local history and heritage firsthand.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Italy</h3>
+                            <p class="text-gray-600 mt-2">Completed 5 extensive trips across Italy to explore its rich architectural and historical background, actively adapting to diverse regional cultures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6 text-rose-700">Future Projects & Target Schools</h2>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <!-- Logo Waterloo -->
+                            <img src="https://lh3.googleusercontent.com/d/1bXleNmnBo-WLdZSmRXGxNhUsAONdgles" alt="Waterloo Logo" class="w-28 h-28 mr-6 object-contain">
+                            <div>
+                                <strong class="text-gray-800 text-lg">Project 1: University of Waterloo (Canada)</strong>
+                                <p class="mt-2">I want to study or do an internship in Big Data and Finance. It is a great place to discover the North American tech market and improve my English.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <!-- Logo Edinburgh -->
+                            <img src="https://lh3.googleusercontent.com/d/18WQUIiBE_vSRYFJSoWUTJp4Qb5Y2-c4B" alt="Edinburgh Logo" class="w-28 h-28 mr-6 object-contain">
+                            <div>
+                                <strong class="text-gray-800 text-lg">Project 2: University of Edinburgh (UK)</strong>
+                                <p class="mt-2">I aim for an internship or exchange semester in Artificial Intelligence. This will help me understand the European tech market and practice my English in a professional environment.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <!-- Logo NTU -->
+                            <img src="https://lh3.googleusercontent.com/d/1h3LElE90pyYEInbWUBrPmVycPlozsgMB" alt="NTU Logo" class="w-28 h-28 mr-6 object-contain">
+                            <div>
+                                <strong class="text-gray-800 text-lg">Project 3: National Taiwan University (Taiwan)</strong>
+                                <p class="mt-2">I want to discover High-Performance Computing (HPC) labs in Asia. Since I am currently learning Chinese, going to Taiwan is the perfect way to practice with locals and improve my Chinese.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sustainability Section -->
+        <section id="sustainability" class="page-section">
+            <h1 class="text-4xl font-extrabold mb-8">Sustainability & Civic Engagement</h1>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-3 text-rose-700">Climate Fresk (La Fresque du Climat)</h2>
+                        <p class="text-gray-600">Actively participated in this collaborative workshop to map and understand the systemic causes and consequences of global climate change, strengthening my awareness of environmental challenges in engineering.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-8">
+                        <h2 class="text-2xl font-bold mb-3 text-rose-700">Eco-Delegate</h2>
+                        <p class="text-gray-600">Served as an Eco-delegate during my academic years, acting as a representative to promote sustainable initiatives, raise awareness among peers, and implement environmentally friendly practices within the student community.</p>
+                    </div>
+                    <div class="border-t border-gray-100 pt-8">
+                        <h2 class="text-2xl font-bold mb-3 text-rose-700">Women7</h2>
+                        <p class="text-gray-600">Engaged with Women7 to promote diversity, support gender equality within the scientific and engineering fields, and contribute to impactful social awareness campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Sport & Activities Section -->
+        <section id="activities" class="page-section">
+            <h1 class="text-4xl font-extrabold mb-8">Sport & Other Activities</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-4 text-rose-700">Theater & Public Speaking</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        I have been practicing theater for 10 years. As a member of the association <strong>"Dreamkeepers"</strong>, I had the opportunity to perform in major theatrical productions over several years, drawing audiences of up to 2,000 people. 
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        This experience not only put my hometown in the spotlight but profoundly transformed my ability to assert myself in public. It taught me stage presence, stress management, and advanced public speaking skills—assets that are highly transferable to professional pitches and leadership roles.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6 text-rose-700">Sports & Music</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Tennis</h3>
+                            <p class="text-gray-500 text-sm">Practicing since the age of 7, developing discipline and competitive resilience.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">Guitar</h3>
+                            <p class="text-gray-500 text-sm">Playing since the age of 11, fostering creativity and a balanced lifestyle outside of academics.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-1">ClubZik (DJ at N7)</h3>
+                            <p class="text-gray-500 text-sm">Active member and DJ at ClubZik, animating student events and campus life at ENSEEIHT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
